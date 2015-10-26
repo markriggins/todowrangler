@@ -17,17 +17,17 @@
   function Router($routeProvider){
     $routeProvider
       .when('/', {
-        templateUrl: '/app/todos/todos.html',
+        templateUrl: 'app/todos/todos.html',
         controller: 'TodosController',
         controllerAs: 'todosController'
       })
       .when('/archive', {
-        templateUrl: '/app/todos/todos.html',
+        templateUrl: 'app/todos/todos.html',
         controller: 'ArchivesController',
         controllerAs: 'todosController'
       })
       .when('/about', {
-        templateUrl: '/app/about/about.html'
+        templateUrl: 'app/about/about.html'
       })
       .otherwise('/');
   }
