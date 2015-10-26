@@ -34,3 +34,7 @@ karma start
 The specs are located beside the code they test. Yes, it's technically open for
 all to see but if I didn't want it viewable, I could just put it in a different
 folder outside of app.
+
+## Documentation
+
+Documentation can be generated with [jsdoc](http://usejsdoc.org/index.html).
