@@ -1,7 +1,7 @@
 ## Todo Wrangler
 
-This is a very simple [angular]() application to demonstrate style guidelines
-learned from [John Papa](). All in all, it was a fun exercise to relearn
+This is a very simple [angular](https://angularjs.org/) application to demonstrate style guidelines
+learned from [John Papa](http://www.johnpapa.net/). All in all, it was a fun exercise to relearn
 angular, jasmine, and karma.
 
 ## Structure
