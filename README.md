@@ -37,4 +37,5 @@ folder outside of app.
 
 ## Documentation
 
-Documentation can be generated with [jsdoc](http://usejsdoc.org/index.html).
+Documentation can be viewed [here](https://jbydeley.github.io/todowrangler/) or
+generated with [jsdoc](http://usejsdoc.org/index.html).
