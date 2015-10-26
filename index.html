@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="TodoWrangler">
+  <head>
+    <meta charset="utf-8">
+    <title>Todo Wrangler</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css" media="screen,projection">
+    <link rel="stylesheet" href="css/application.css">
+  </head>
+  <body>
+    <nav>
+      <div class="nav-wrapper blue" ng-controller="NavController as nav">
+        <a href="#!" class="brand-logo">ng-Todo</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li ng-class="{'active': nav.isActive('/')}"><a href="#/">Home</a></li>
+          <li ng-class="{'active': nav.isActive('/archive')}"><a href="#/archive">Archive</a></li>
+          <li ng-class="{'active': nav.isActive('/about')}"><a href="#/about">About</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <li ng-class="{'active': nav.isActive('/')}"><a href="#/">Home</a></li>
+          <li ng-class="{'active': nav.isActive('/archive')}"><a href="#/archive">Archive</a></li>
+          <li ng-class="{'active': nav.isActive('/about')}"><a href="#/about">About</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="main-wrapper">
+        <div ng-view></div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.1/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.1/angular-route.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.1/angular-resource.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-local-storage/0.2.2/angular-local-storage.js"></script>
+    <script src="/app/app.module.js"></script>
+    <script src="/app/app.routes.js"></script>
+    <script src="/app/navigation/nav-controller.js"></script>
+    <script src="/app/todos/todos.module.js"></script>
+    <script src="/app/todos/todos-controller.js"></script>
+    <script src="/app/todos/todos-service.js"></script>
+    <script src="/app/todos/archives-controller.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,5 @@
+@charset "UTF-8";
+
+.strike {
+  text-decoration: line-through;
+}
