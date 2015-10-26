@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: todos/todos-service.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: todos/todos-service.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>(function() {
+  'use strict';
+
+  angular
+    .module('TodoWrangler.Todos')
+    .factory('TodosService', TodosService);
+
+  TodosService.$inject = [
+    'localStorageService'
+  ];
+
+  /**
+   * @typedef {function} TodosService
+   */
+
+  /**
+   * @class
+   * @classdesc Handles Todo CRUD
+   * @param {localStorageService} localStorageService - Service for accessing local storage [External]{@link https://github.com/grevory/angular-local-storage}
+   * @memberOf Todos
+   */
+  function TodosService(localStorageService) {
+      var that = this;
+      init();
+      
+      return {
+        addTodo: addTodo,
+        addArchivedTodo: addArchivedTodo,
+        check: check,
+        getTodos: getTodos,
+        getArchivedTodos: getArchivedTodos,
+        removeTodo: removeTodo,
+        removeArchivedTodo: removeArchivedTodo
+      };
+
+      /**
+       * @name addTodo
+       * @desc adds a todo
+       * @memberOf Todos.TodosService
+       */
+      function addTodo(todo) {
+        that.todos.push(todo);
+        save();
+      }
+
+      /**
+       * @name addTodo
+       * @desc adds an archived todo
+       * @memberOf Todos.TodosService
+       */
+      function addArchivedTodo(todo) {
+        todo.isDone = true;
+        that.archived.push(todo);
+        save();
+      }
+
+      /**
+       * @name check
+       * @desc gets all todos
+       * @memberOf Todos.TodosService
+       */
+      function check(todo) {
+        todo.isDone = !todo.isDone;
+        save();
+      }
+
+      /**
+       * @name getTodos
+       * @desc gets all todos
+       * @memberOf Todos.TodosService
+       */
+      function getTodos() {
+        return that.todos;
+      }
+
+      /**
+       * @name getArchivedTodos
+       * @desc gets all archived todos
+       * @memberOf Todos.TodosService
+       */
+      function getArchivedTodos() {
+        return that.archived;
+      }
+
+      /**
+       * @name removeTodo
+       * @desc removes a todo
+       * @param {Todo} the todo to remove
+       * @memberOf Todos.TodosService
+       */
+      function removeTodo(todo) {
+        that.todos.splice(that.todos.indexOf(todo), 1);
+        save();
+      }
+
+      /**
+       * @name removeArchivedTodo
+       * @desc removes an archived todo
+       * @param {Todo} the todo to remove
+       * @memberOf Todos.TodosService
+       */
+      function removeArchivedTodo(todo) {
+        that.archived.splice(that.archived.indexOf(todo), 1);
+        save();
+      }
+
+      /**
+       * @private
+       * @name save
+       * @desc saves to localstorage
+       * @memberOf Todos.TodosService
+       */
+      function save() {
+        localStorageService.add('todos', JSON.stringify(that.todos, function(key, value) {
+          if (key === '$$hashKey') {
+            return undefined;
+          }
+          return value;
+        }));
+
+        localStorageService.add('archived', JSON.stringify(that.archived, function(key, value) {
+          if (key === '$$hashKey') {
+            return undefined;
+          }
+          return value;
+        }));
+      }
+
+      /**
+       * @private
+       * @name init
+       * @desc initializes the service
+       * @memberOf Todos.TodosService
+       */
+      function init() {
+        var todosInStorage = localStorageService.get('todos');
+        that.todos = todosInStorage &amp;&amp; JSON.parse(todosInStorage) || [];
+
+        var archivedInStorage = localStorageService.get('archived');
+        that.archived = archivedInStorage &amp;&amp; JSON.parse(archivedInStorage) || [];
+      }
+  }
+})();
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Application.Router.html">Router</a></li><li><a href="Navigation.NavController.html">NavController</a></li><li><a href="Todos.ArchivesController.html">ArchivesController</a></li><li><a href="Todos.TodosController.html">TodosController</a></li><li><a href="Todos.TodosService.html">TodosService</a></li></ul><h3>Namespaces</h3><ul><li><a href="Application.html">Application</a></li><li><a href="Navigation.html">Navigation</a></li><li><a href="Todos.html">Todos</a></li></ul><h3><a href="global.html">Global</a></h3>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.3</a> on Mon Oct 26 2015 16:25:20 GMT-0400 (EDT)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

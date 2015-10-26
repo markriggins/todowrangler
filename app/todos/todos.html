@@ -1,0 +1,18 @@
+<h2>{{todosController.title}}</h2>
+<div class="collection" ng-show="todosController.todos.length > 0">
+  <div class="collection-item"
+     ng-repeat="todo in todosController.todos | orderBy:'isDone'">
+    <span ng-class="{'strike':todo.isDone}">{{todo.text}}</span>
+    <a href="" ng-click="todosController.removeTodo(todo)" class="secondary-content"><i class="material-icons right red-text">delete</i></a>
+    <a href="" ng-click="todosController.check(todo)" class="secondary-content"><i class="material-icons">done</i></a>
+  </div>
+</div>
+
+<div class="row" ng-show="todosController.canAdd">
+  <div class="input-field col s6">
+    <form ng-submit="todosController.addTodo()">
+      <input id="todo" type="text" class="validate" ng-model="todosController.todo.text">
+      <label class="active" for="todo">Add a todo</label>
+    </form>
+  </div>
+</div>
