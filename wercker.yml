@@ -7,7 +7,6 @@ build:
 
 deploy:
   steps:
-    - uetchy/gh-pages:
+    - lukevivier/gh-pages:
         token: $GIT_TOKEN
         domain: todowrangler/jbydeley.github.io
-        path: /
