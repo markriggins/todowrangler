@@ -7,6 +7,6 @@ build:
 
 deploy:
   steps:
-    - gh-pages:
+    - uetchy/gh-pages:
         token: $GIT_TOKEN
         domain: jbydeley.github.io
