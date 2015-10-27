@@ -4,6 +4,12 @@ build:
   steps:
     # A step that executes `npm install` command
     - npm-install
+    script:
+      name: setup Firefox for unit test
+      code: |
+        ## set Firefox to use fake X from xvfbc
+        test -e /tmp/.X99-lock || sudo /usr/bin/Xvfb :99 &
+        export DISPLAY=:99.0
     # A step that executes `npm test` command
     - npm-test
 
