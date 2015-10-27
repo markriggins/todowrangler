@@ -9,5 +9,5 @@ deploy:
   steps:
     - uetchy/gh-pages:
         token: $GIT_TOKEN
-        domain: todowercker/jbydeley.github.io
+        domain: todowrangler/jbydeley.github.io
         path: /
