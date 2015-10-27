@@ -1,7 +1,4 @@
 box: node
-build:
-  steps:
-
 deploy:
   steps:
     - gh-pages:
