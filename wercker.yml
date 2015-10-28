@@ -9,4 +9,4 @@ deploy:
   steps:
     - lukevivier/gh-pages:
         token: $GIT_TOKEN
-        domain: jbydeley.github.io/todowrangler
+        domain: jbydeley.github.io
