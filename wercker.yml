@@ -1,0 +1,12 @@
+box: node
+build:
+  # http://devcenter.wercker.com/docs/steps/index.html
+  steps:
+    # A step that executes `npm install` command
+    - npm-install
+
+deploy:
+  steps:
+    - lukevivier/gh-pages:
+        token: $GIT_TOKEN
+        domain: jbydeley.github.io
