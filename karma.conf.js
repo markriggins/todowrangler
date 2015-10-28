@@ -15,6 +15,8 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+      'https://code.jquery.com/jquery-2.1.4.min.js',
+      'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js',
       'https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.1/angular.js',
       'https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.1/angular-route.min.js',
       'https://cdnjs.cloudflare.com/ajax/libs/angular-local-storage/0.2.2/angular-local-storage.js',
