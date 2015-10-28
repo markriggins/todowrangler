@@ -4,7 +4,7 @@ build:
   steps:
     # A step that executes `npm install` command
     - npm-install
-    - ./setup/setup.sh
+    - ./setup.sh
 
 deploy:
   steps:
