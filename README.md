@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/jbydeley/todowrangler.svg?branch=master)](https://travis-ci.org/jbydeley/todowrangler)
-[![Coverage Status](https://coveralls.io/repos/jbydeley/todowrangler/badge.svg?branch=travis&service=github)](https://coveralls.io/github/jbydeley/todowrangler?branch=master)
+[![Coverage Status](https://coveralls.io/repos/jbydeley/todowrangler/badge.svg?branch=master&service=github)](https://coveralls.io/github/jbydeley/todowrangler?branch=master)
 
 ## Todo Wrangler
 
