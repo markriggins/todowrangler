@@ -20,9 +20,9 @@
    * @memberOf Todos
    */
   function TodosService(localStorageService) {
-      var that = this;
+      let that = this;
       init();
-      
+
       return {
         addTodo: addTodo,
         addArchivedTodo: addArchivedTodo,
@@ -133,10 +133,10 @@
        * @memberOf Todos.TodosService
        */
       function init() {
-        var todosInStorage = localStorageService.get('todos');
+        let todosInStorage = localStorageService.get('todos');
         that.todos = todosInStorage && JSON.parse(todosInStorage) || [];
 
-        var archivedInStorage = localStorageService.get('archived');
+        let archivedInStorage = localStorageService.get('archived');
         that.archived = archivedInStorage && JSON.parse(archivedInStorage) || [];
       }
   }

@@ -2,7 +2,7 @@
   'use strict';
 
   describe('ArchivesController', function() {
-    var ctrl, scope, localStorage;
+    let ctrl, scope, localStorage;
 
     beforeEach(module('TodoWrangler'));
 
@@ -13,7 +13,7 @@
     }));
 
     describe('removeTodo', function() {
-      var goodTodo;
+      let goodTodo;
 
       beforeEach(function() {
         goodTodo = {text: 'Good Todo', isDone: true};
@@ -38,7 +38,7 @@
     });
 
     describe('check', function() {
-      var finishedTodo, unfinishedTodo;
+      let finishedTodo, unfinishedTodo;
 
       beforeEach(function() {
         finishedTodo = {text: 'Finished', isDone: true};

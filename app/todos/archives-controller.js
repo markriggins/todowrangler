@@ -16,7 +16,7 @@
    * @memberOf Todos
    */
   function ArchivesController(TodosService) {
-    var that = this;
+    let that = this;
 
     this.title = 'Archived';
     this.canAdd = false;

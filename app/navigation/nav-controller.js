@@ -19,7 +19,7 @@
    * @memberOf Navigation
    */
   function NavController($rootScope, $location) {
-    var that = this;
+    let that = this;
 
     this.isActive = isActive;
 

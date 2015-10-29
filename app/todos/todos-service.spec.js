@@ -2,7 +2,7 @@
   'use strict';
 
   describe('TodosService', function() {
-    var service, localStorage;
+    let service, localStorage;
 
     beforeEach(module('TodoWrangler'));
 
@@ -23,7 +23,7 @@
     describe('addTodo', function() {
 
       it('should add a todo', function() {
-        var todo = {text: 'My Todo 1', isDone: false};
+        let todo = {text: 'My Todo 1', isDone: false};
         service.addTodo(todo);
 
         expect(localStorage.add).toHaveBeenCalled();
@@ -35,7 +35,7 @@
     describe('removeTodo', function() {
 
       it('should remove a todo', function() {
-        var todo = {text: 'Test', isDone: false};
+        let todo = {text: 'Test', isDone: false};
         service.removeTodo(todo);
 
         expect(localStorage.add).toHaveBeenCalled();
@@ -47,7 +47,7 @@
     describe('addArchivedTodo', function() {
 
       it('should add an archived todo', function() {
-        var todo = {text: 'My Todo 1', isDone: false};
+        let todo = {text: 'My Todo 1', isDone: false};
         service.addArchivedTodo(todo);
 
         expect(localStorage.add).toHaveBeenCalled();
@@ -59,7 +59,7 @@
     describe('removeArchivedTodo', function() {
 
       it('should remove an archived todo', function() {
-        var todo = {text: 'Maybe!', isDone: true};
+        let todo = {text: 'Maybe!', isDone: true};
         service.removeArchivedTodo(todo);
 
         expect(localStorage.add).toHaveBeenCalled();
@@ -71,15 +71,15 @@
     describe('check', function() {
 
       it('should mark a completed todo as uncompleted', function() {
-        var todo = {text: 'Maybe!', isDone: true};
+        let todo = {text: 'Maybe!', isDone: true};
         service.check(todo);
-        
+
         expect(localStorage.add).toHaveBeenCalled();
         expect(todo.isDone).toBe(false);
       });
 
       it('should mark an uncompleted todo as completed', function() {
-        var todo = {text: 'Maybe!', isDone: false};
+        let todo = {text: 'Maybe!', isDone: false};
         service.check(todo);
 
         expect(localStorage.add).toHaveBeenCalled();

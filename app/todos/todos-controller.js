@@ -17,7 +17,7 @@
    * @memberOf Todos
    */
   function TodosController(TodosService) {
-    var that = this;
+    let that = this;
 
     this.title = 'Todos';
     this.canAdd = true;
