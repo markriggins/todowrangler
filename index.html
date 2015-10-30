@@ -9,22 +9,12 @@
     <link rel="stylesheet" href="css/application.css">
   </head>
   <body>
-    <nav>
-      <div class="nav-wrapper blue" ng-controller="NavController as nav">
-        <a href="#!" class="brand-logo">Todo Wrangler</a>
-        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-        <ul class="right hide-on-med-and-down">
-          <li ng-class="{'active': nav.isActive('/')}"><a href="#/">Home</a></li>
-          <li ng-class="{'active': nav.isActive('/archive')}"><a href="#/archive">Archive</a></li>
-          <li ng-class="{'active': nav.isActive('/about')}"><a href="#/about">About</a></li>
-        </ul>
-        <ul class="side-nav" id="mobile-demo">
-          <li ng-class="{'active': nav.isActive('/')}"><a href="#/">Home</a></li>
-          <li ng-class="{'active': nav.isActive('/archive')}"><a href="#/archive">Archive</a></li>
-          <li ng-class="{'active': nav.isActive('/about')}"><a href="#/about">About</a></li>
-        </ul>
-      </div>
-    </nav>
+
+    <todo-navigation title="Todo Wrangler">
+      <li ng-class="{'active': isActive('/')}"><a href="#/">Home</a></li>
+      <li ng-class="{'active': isActive('/archive')}"><a href="#/archive">Archive</a></li>
+      <li ng-class="{'active': isActive('/about')}"><a href="#/about">About</a></li>
+    </todo-navigation>
 
     <div class="container">
       <div class="main-wrapper">
@@ -40,7 +30,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-local-storage/0.2.2/angular-local-storage.js"></script>
     <script src="app/app.module.js"></script>
     <script src="app/app.routes.js"></script>
-    <script src="app/navigation/nav-controller.js"></script>
+    <script src="app/navigation/navigation-directive.js"></script>
     <script src="app/todos/todos.module.js"></script>
     <script src="app/todos/todos-controller.js"></script>
     <script src="app/todos/todos-service.js"></script>

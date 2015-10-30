@@ -1,4 +1,4 @@
-(function($) {
+(function() {
   'use strict';
 
   angular
@@ -15,8 +15,6 @@
    * @memberOf Application
    */
   function Router($routeProvider){
-    $(".button-collapse").sideNav();
-
     $routeProvider
       .when('/', {
         templateUrl: 'app/todos/todos.html',
@@ -33,4 +31,4 @@
       })
       .otherwise('/');
   }
-})(jQuery);
+})();

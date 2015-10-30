@@ -19,7 +19,7 @@ app/
  - about/
    - about.html
  - navigation/
-   - nav-controller.js
+   - navigation-directive.js
  - todos/
    - todos-controller.js
    - todos-controller.spec.js
