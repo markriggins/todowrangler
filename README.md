@@ -1,5 +1,19 @@
-[![Build Status](https://travis-ci.org/jbydeley/todowrangler.svg?branch=master)](https://travis-ci.org/jbydeley/todowrangler)
-[![Coverage Status](https://coveralls.io/repos/jbydeley/todowrangler/badge.svg?branch=master&service=github)](https://coveralls.io/github/jbydeley/todowrangler?branch=master)
+## Color Variations of Todo Wranger
+
+These color variations have all been built and pushed to DockerHub so you
+can use them as fodder various Docker deployment tools.  Each image has a
+different color for the nav-wrapper at the top of the page.
+
+|Color|Image(s)|
+|---|---|
+|red|markriggins/todowrangler:red|
+|green|markriggins/todowrangler:green|
+|purple|markriggins/todowrangler:purple|
+|blue|markriggins/todowrangler:latest|
+|blue|markriggins/todowrangler:0.0.1|
+
+
+## ------------------------------------------------------- ##
 
 ## Todo Wrangler
 
